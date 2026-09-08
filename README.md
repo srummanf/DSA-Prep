@@ -8,8 +8,9 @@ This repository is a study and practice hub: a place to keep solved DSA problems
 
 # A–Z DSA Concepts Reference
 
+
 | Letter | Concept                                        | Category               |
-| ------ | ---------------------------------------------- | ---------------------- |
+| -------- | ------------------------------------------------ | ------------------------ |
 | 0-9    | 0/1 Knapsack                                   | Dynamic Programming    |
 | 0-9    | 4 Queens                                       | Backtracking           |
 | 0-9    | 8 Queens                                       | Backtracking           |
@@ -123,76 +124,6 @@ This repository is a study and practice hub: a place to keep solved DSA problems
 | Z      | Z-Algorithm                                    | String Algorithm       |
 | Z      | Zigzag Traversal                               | Tree Traversal         |
 
-## What This Repository Contains
-
-- Topic-wise DSA solutions covering algorithms, data structures, strings, and company-wise practice.
-- Java-first implementations, with a few supporting files in other languages where useful.
-- Notes and learning material for interview preparation.
-- SQL, AI/ML, data science, and placement resources that support broader technical preparation.
-- Automated LeetCode solution folders for generated or imported problem entries.
-
-## Repository Structure
-
-```text
-dsahub/
-|-- DSA/
-|   |-- Algorithms/          # Algorithmic patterns and techniques
-|   |-- Data Structures/     # Core data-structure implementations and problems
-|   |-- Company Wise/        # Company-tagged coding questions and notes
-|   `-- String/              # String-focused problems and techniques
-|-- LeetcodeAutomated/       # LeetCode problem folders with solution files
-|-- Interview/               # CS notes, interview tips, SQL, and system-design material
-|-- AI ML/                   # Data science, machine learning, and deep learning resources
-|-- Resources/               # DSA sheets, guides, PDFs, and extra reference material
-|-- image/                   # Images used by notes and documentation
-|-- CONTRIBUTING.md          # Contribution guidelines
-|-- LICENSE.md               # License information
-`-- README.md                # Repository overview
-```
-
-## How To Use
-
-1. Pick a topic from `DSA/Algorithms/` or `DSA/Data Structures/`.
-2. Read the related notes if a folder contains a `README.md`, `ReadME.MD`, or `Learn.MD`.
-3. Open the solution file and trace the approach.
-4. Re-solve the problem independently before checking the saved implementation.
-5. Use `DSA/Company Wise/` when preparing for a specific company.
-
-## Running Solutions
-
-Most solution files are standalone Java programs or LeetCode-style classes. For standalone Java files:
-
-```bash
-javac FileName.java
-java FileName
-```
-
-Some files are intended for online judges and may need the platform-provided method signature or driver code.
-
-## Supporting Material
-
-Beyond solved DSA problems, this repository also includes:
-
-- `Interview/` for CS fundamentals, SQL, system design, HR questions, and interview notes.
-- `Resources/` for DSA sheets, guides, and revision material.
-- `AI ML/` for data science, machine learning, and deep learning references.
-- `LeetcodeAutomated/` for LeetCode problem folders generated or saved during practice.
-
-## Contributing
-
-Contributions are welcome when they keep the repository organized and useful.
-
-Before contributing:
-
-- Follow the existing folder structure.
-- Place solutions in the most relevant topic or company folder.
-- Use clear file names that describe the problem.
-- Add short notes when an approach is non-obvious.
-- Read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request.
-
-## License
-
-This repository is licensed under the terms of [LICENSE.md](./LICENSE.md).
 
 <table>
   <tr>

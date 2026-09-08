@@ -1,5 +1,0 @@
-/* Apply the custom cursor globally */
-* {
-  cursor: url("../assets/cursor.svg") 10 10, auto;
-}
-
