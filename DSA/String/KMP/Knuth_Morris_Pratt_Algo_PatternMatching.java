@@ -1,30 +1,45 @@
 /**
- * str --> N
- * pat --> M
- * for( i : 0 to N-M){
+ * str --> M
+ * pat --> N
+ *
+ * for(i : 0 to M-N){
  *    int j;
- *    for(j : 0 to M-1){
- *        if(str[i+j]!=pat[j]) break;
- *  }
- *   if(j==M) return i; // pattern found at i
+ *
+ *    for(j : 0 to N-1){
+ *        if(str[i+j] != pat[j])
+ *            break;
+ *    }
+ *
+ *    if(j == N)
+ *        return i;    // Pattern found at i
  * }
  */
 
 class Knuth_Morris_Pratt_Algo_PatternMatching {
 
-  public static void Patternsearch(String str, String pat) {
-    int M = pat.length();
-    int N = str.length();
+    public static void Patternsearch(String str, String pat) {
 
-    for (int i = 0; i <= N - M; i++) {
-      int j;
-      for (j = 0; j < M; j++) if (str.charAt(i + j) != pat.charAt(j)) break;
+        int M = str.length();
+        int N = pat.length();
 
-      if (j == M) System.out.println("Pattern found at index " + i);
+        for (int i = 0; i <= M - N; i++) {
+
+            int j;
+
+            for (j = 0; j < N; j++) {
+
+                if (str.charAt(i + j) != pat.charAt(j))
+                    break;
+            }
+
+            if (j == N)
+                System.out.println("Pattern found at index " + i);
+        }
     }
-  }
 
-  public static void main(String[] args){
-    Patternsearch("abcabcabc", "abc");
-  }
+    public static void main(String[] args) {
+
+        Patternsearch("abcabcabc", "abc");
+    }
 }
+
