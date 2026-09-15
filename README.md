@@ -125,19 +125,3 @@ This repository is a study and practice hub: a place to keep solved DSA problems
 | Z      | Zigzag Traversal                               | Tree Traversal         |
 
 
-<table>
-  <tr>
-    <td align="left" width="50%">
-      <strong>Maintained by</strong><br />
-      Shaikh Rumman Fardeen<br />
-      <a href="https://github.com/srummanf">GitHub: @srummanf</a><br />
-      <a href="mailto:rummanfardeen4567@gmail.com">rummanfardeen4567@gmail.com</a>
-    </td>
-    <td align="right" width="50%">
-      <strong>Project Links</strong><br />
-      <a href="https://dsacompanywise.netlify.app/">Live Demo</a><br />
-      <a href="https://github.com/srummanf/Data-Structures-And-Algorithms_SQL-DA-DS_Interview-Practice">Source Code</a><br />
-      <a href="./LICENSE">MIT License</a> | <a href="./CONTRIBUTING.md">Contributing</a>
-    </td>
-  </tr>
-</table>

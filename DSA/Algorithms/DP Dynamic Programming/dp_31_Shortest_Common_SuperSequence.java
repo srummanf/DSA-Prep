@@ -1,3 +1,23 @@
+// Shortest Common Supersequence
+//
+// Step 1: Find LCS
+// Step 2: Use LCS table to construct SCS
+//
+// Match:
+//     take character once
+//
+// Mismatch:
+//     move towards the larger LCS value
+//
+// Remaining characters:
+//     append them
+//
+// Length of SCS:
+//     m + n - LCS
+
+// SCS length = m + n - LCS length
+
+
 class Solution {
     public String shortestCommonSupersequence(String s1, String s2) {
         int n = s1.length();

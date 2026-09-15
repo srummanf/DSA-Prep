@@ -6,7 +6,7 @@ Return an array containing all the safe nodes of the graph. The answer should be
 
 /** To find the safe state(A terminal node which has no outgoing edges /// A node whose every possible path leads to terminal node)  --> Topo Sort for the reversed graph */
 
-import java.util.Collections;
+import java.util.*;
 class Solution {
     public List<Integer> eventualSafeNodes(int[][] graph) {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
@@ -68,5 +68,13 @@ class Solution {
         }
 
         return topo;
+    }
+}
+
+class G_25_SafeStates {
+    public static void main(String[] args) {
+        int[][] graph = {{1, 2}, {2, 3}, {5}, {0}, {5}, {}, {}};
+        List<Integer> safeNodes = new Solution().eventualSafeNodes(graph);
+        System.out.println(safeNodes);
     }
 }

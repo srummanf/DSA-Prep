@@ -1,3 +1,10 @@
+/** Bipartite Graph : A graph is bipartite if we can divide the vertices into two disjoint sets such that every edge connects a vertex from one set to another.
+ * 2 nodes have alternate colors if they are connected by an edge. So, we can color the graph using 2 colors and check if any two adjacent nodes have the same color. If yes, then it is not a bipartite graph.
+ * 
+ */
+
+// Any Graph with even cycle is bipartite and any graph with odd cycle is not bipartite.
+
 import java.util.*;
 
 class G_18_Bipartite_DFS {

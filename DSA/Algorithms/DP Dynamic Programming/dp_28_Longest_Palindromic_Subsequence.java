@@ -28,6 +28,7 @@ class Solution {
             Arrays.fill(a, -1);
         }
         String r = rev(s);
+        // String r = new StringBuilder(s).reverse().toString();
         return f(n - 1, n - 1, s, r, dp);
 
     }

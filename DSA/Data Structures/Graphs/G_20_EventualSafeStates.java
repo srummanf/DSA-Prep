@@ -1,22 +1,8 @@
-import java.util.*;
+import java.util.*; 
 
-class G_19_DetectCycleDFS_DirectedGraph{
-    boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
-        int vis[] = new int[V];
-        int pathVis[] = new int[V];
-        Arrays.fill(vis, 0);
-        Arrays.fill(pathVis, 0);
-        for(int i = 0;i<V;i++) {
-            if(vis[i] == 0) {
-                if(dfs(i, vis, pathVis, adj) == true) return true; 
-            }
-        }
-        return false; 
-    }
-
+class G_20_EventualSafeStates{
     boolean dfs(int node, int vis[], int pathVis[], ArrayList<ArrayList<Integer>> adj) {
         vis[node] = 1; 
-
         pathVis[node] = 1; 
         for(int adjacentNode: adj.get(node)) {
             if(vis[adjacentNode]==0) {
@@ -30,6 +16,23 @@ class G_19_DetectCycleDFS_DirectedGraph{
         return false; 
     }
 
+    public List<Integer> eventualSafeNodes(int V, ArrayList<ArrayList<Integer>> adj) {
+        int vis[] = new int[V];
+        int pathVis[] = new int[V];
+        Arrays.fill(vis, 0);
+        Arrays.fill(pathVis, 0);
+        for(int i = 0;i<V;i++) {
+            if(vis[i] == 0) {
+                dfs(i, vis, pathVis, adj); 
+            }
+        }
+        List<Integer> safeNodes = new ArrayList<>();
+        for(int i=0;i<V;i++) {
+            if(pathVis[i] == 0) safeNodes.add(i); 
+        }
+        return safeNodes; 
+    }
+
     public static void main(String[] args)
     {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
@@ -39,13 +42,10 @@ class G_19_DetectCycleDFS_DirectedGraph{
         adj.get(0).add(1);
         adj.get(1).add(2);
         adj.get(2).add(3);
-        adj.get(3).add(1);
                 
-        G_19_DetectCycleDFS_DirectedGraph obj = new G_19_DetectCycleDFS_DirectedGraph();
-        boolean ans = obj.isCycle(4, adj);
-        if (ans)
-            System.out.println("Yes");    
-        else
-            System.out.println("No");
+        G_20_EventualSafeStates obj = new G_20_EventualSafeStates();
+        List<Integer> ans = obj.eventualSafeNodes(4, adj);
+        
+        System.out.println("Eventual Safe Nodes: " + ans);
     }
 }

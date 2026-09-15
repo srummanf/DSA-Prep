@@ -1,30 +1,32 @@
-/** Kahn Algo : 
+
+/** Kahn Algo :
  * 1. Find Indegree Array
- * 2. Make a Queue 
+ * 2. Make a Queue
  * 3. Add those elements in the Queue whose Indegree == 0 using a loop ---> O(N)
  * 4. Unless Q is empty , Pop the element and save it in a var, push it in topo array
  * 5. For all the neighbours of Node, indegree[ngh]-- , if indegree[ngh]==0 push ngh in Q
  */
-
-import java.io.*;
 import java.util.*;
 
 class Solution {
 
+    // Kahns Algorithm
+    //-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
     public int[] topoSort(int N, ArrayList<ArrayList<Integer>> adj) {
         int[] topo = new int[N];
         int[] indegree = new int[N];
 
-        // Finding Indegree
+        // 1. Finding Indegree
         for (int i = 0; i < N; i++) {
             for (int destNode : adj.get(i)) {
                 indegree[destNode]++;
             }
         }
 
+        // 2. Make a Queue
         Queue<Integer> q = new LinkedList<>();
 
-        // Adding nodes to queue with indegree = 0
+        // 3. Adding nodes to queue with indegree = 0
         for (int i = 0; i < N; i++) {
             if (indegree[i] == 0) {
                 q.add(i);
@@ -33,19 +35,19 @@ class Solution {
 
         int idx = 0;
 
+        // 4. Unless Q is empty , Pop the element and save it in a var (here `node`), push it in topo array
         while (!q.isEmpty()) {
             int node = q.poll();
             // this node is very important -- for any other questions, use this node only
-            topo[idx] = node;
-            idx++;
+            topo[idx++] = node;
 
-            // Getting neighbour nodes of popped node and decreasing their indegree by 1
+            // 5. Getting neighbour nodes of popped node and decreasing their indegree by 1
             for (int ngh : adj.get(node)) {
                 indegree[ngh]--;
                 if (indegree[ngh] == 0) {
                     q.add(ngh);
                 }
-            }   
+            }
         }
 
         return topo;
